@@ -1,0 +1,11 @@
+<ul class="space-y-3">
+  @for (todo of todos; track todo.id) {
+    <li class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition hover:shadow-md">
+      <app-todo-item
+        [todo]="todo"
+        (deleteTodo)="onDeleteTodo($event)"
+        (toggleTodo)="onToggleTodo($event)"
+      ></app-todo-item>
+    </li>
+  }
+</ul>
